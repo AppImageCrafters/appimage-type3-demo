@@ -12,9 +12,6 @@ AppDir:
     version: 17.12.3
     exec: usr/bin/kcalc
 
-  after_runtime:
-    - echo "HI! $USER"
-    - ls
   apt:
     arch: amd64
     sources:
