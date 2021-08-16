@@ -1,3 +1,7 @@
+AppDir
+appimage-builder-cache
+*.AppImage
+
 # Prerequisites
 *.d
 
