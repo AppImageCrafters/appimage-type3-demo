@@ -6,11 +6,11 @@ AppDir:
   path: ./AppDir
 
   app_info:
-    id: org.kde.kcalc
-    name: kcalc
+    id: org.gnome.gnome-calculator
+    name: gnome-calculator
     icon: accessories-calculator
-    version: 17.12.3
-    exec: usr/bin/kcalc
+    version: 3.36.0
+    exec: usr/bin/gnome-calculator
 
   apt:
     arch: amd64
@@ -21,15 +21,14 @@ AppDir:
       - sourceline: 'deb [arch=amd64] http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse'
 
     include:
-      - kcalc
-      - libpulse0
+      - gnome-calculator
+      - librsvg2-common
     exclude:
-      - phonon4qt5
-      - libkf5service-bin
-      - perl
-      - perl-base
-      - libpam-runtime
-      - procps
+      - adwaita-icon-theme
+      - adwaita-icon-theme-full
+      - humanity-icon-theme
+      - systemd
+      - dbus-user-session
 
   files:
     exclude:
