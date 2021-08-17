@@ -16,6 +16,10 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y python3-pip python3-setuptools patchelf desktop-file-utils libgdk-pixbuf2.0-dev fakeroot strace fuse gpg squashfs-tools
             sudo pip3 install git+https://github.com/AppImageCrafters/appimage-builder.git@feat/type_3_format
+      - name: Import GPG Keys
+        run: |
+          echo "${{ secrets.GPG_KEY }}" | gpg --import -
+          
       - name: build AppImage
         run: |
             appimage-builder --skip-test

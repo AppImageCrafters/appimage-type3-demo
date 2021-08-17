@@ -68,4 +68,5 @@ AppDir:
 AppImage:
   update-information: "zsync|https://fake.url/AppImage.zsync"
   arch: x86_64
+  sign-key: "991578FF3C5278D4"
   format: 3
